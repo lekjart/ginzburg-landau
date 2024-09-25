@@ -25,3 +25,5 @@ Link to [thesis](https://github.com/lekjart/ginzburg-landau/blob/main/Thesis/Gin
 # Simulation
 
 At the time the simulations for this thesis were performed on a Connection Machine supercomputer from Thinking Machines, but 30 years later I rewrote it to run on CUDA based platforms so it runs very well on any Windows PC with a decent Nvidia GPU. Here you will find both a PDF version of the original thesis as well as the CUDA source code for the simulation.
+
+Link to github [repo](https://github.com/lekjart/ginzburg-landau/)
