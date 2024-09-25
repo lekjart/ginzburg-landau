@@ -3,7 +3,7 @@ by Kjartan Pierre Emilsson
 
 # Background
 
-In 1994 I finished my Phd thesis under the supervision of professor Pierre Coullet from the University of Nice - Sophia Antipolis. The title of the thesis was "Strong Resonances in a Field of Oscillators and Bifurcation of Defects" and its subject was to investigate the patterns emerging in the two-dimensional Ginzbur-Landau equation in the presence of parametric forcing. 
+In 1994 I finished my Phd thesis under the supervision of professor Dr. Pierre Coullet from the University of Nice - Sophia Antipolis. The title of the thesis was "Strong Resonances in a Field of Oscillators and Bifurcation of Defects" and its subject was to investigate the patterns emerging in the two-dimensional Ginzbur-Landau equation in the presence of parametric forcing. 
 
 There are two subjects in this thesis. In the first part, a qualitative method to 
 classify and predict the structure of defects in reaction-diffusion systems is
