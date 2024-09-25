@@ -23,7 +23,7 @@ include excitable pulses, excitable spirals, fronts and spatially periodic
 structures. These structures are studied and their possible bifurcations are 
 analyzed from a qualitative point of view.
 
-Link to [thesis](https://raw.githubusercontent.com/lekjart/ginzburg-landau/blob/main/Thesis/GinzburgLandauParametric_KjartanEmilsson_Phd_Thesis.pdf)
+Link to [thesis](https://raw.githubusercontent.com/lekjart/ginzburg-landau/main/Thesis/GinzburgLandauParametric_KjartanEmilsson_Phd_Thesis.pdf)
 
 # Simulation
 
