@@ -6,6 +6,8 @@ by Dr. Kjartan Pierre Emilsson
 
 In 1994 I finished my Phd thesis under the supervision of professor Dr. Pierre Coullet from the University of Nice - Sophia Antipolis. The title of the thesis was "Strong Resonances in a Field of Oscillators and Bifurcation of Defects" and its subject was to investigate the patterns emerging in the two-dimensional Ginzbur-Landau equation in the presence of parametric forcing. 
 
+![equation](_images/equation.PNG "equation")
+
 There are two subjects in this thesis. In the first part, a qualitative method to 
 classify and predict the structure of defects in reaction-diffusion systems is
 introduced. This qualitative approach makes it easier to analyze the behavior
@@ -25,6 +27,6 @@ Link to [thesis](https://github.com/lekjart/ginzburg-landau/blob/main/Thesis/Gin
 
 # Simulation
 
-At the time the simulations for this thesis were performed on a Connection Machine supercomputer from Thinking Machines, but 30 years later I rewrote it to run on CUDA based platforms so it runs very well on any Windows PC with a decent Nvidia GPU. Here you will find both a PDF version of the original thesis as well as the CUDA source code for the simulation.
+At the time the simulations for this thesis were performed on a [Connection Machine](https://en.wikipedia.org/wiki/Connection_Machine) supercomputer from Thinking Machines, but 30 years later I rewrote it to run on CUDA based platforms so it runs very well on any Windows PC with a decent Nvidia GPU. Here you will find both a PDF version of the original thesis as well as the CUDA source code for the simulation.
 
 Link to github [repo](https://github.com/lekjart/ginzburg-landau/)
