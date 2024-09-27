@@ -27,6 +27,6 @@ Link to [thesis](https://raw.githubusercontent.com/lekjart/ginzburg-landau/main/
 
 # Simulation
 
-At the time the simulations for this thesis were performed on a [Connection Machine](https://en.wikipedia.org/wiki/Connection_Machine) supercomputer from Thinking Machinesm and written in C*, the parallel extension to C, but 30 years later I rewrote it to run on CUDA based platforms so it runs very well on any Windows PC with a decent Nvidia GPU. Here you will find both a PDF version of the original thesis as well as the CUDA source code for the simulation.
+At the time the simulations for this thesis were performed on a [Connection Machine](https://en.wikipedia.org/wiki/Connection_Machine) supercomputer from Thinking Machine and written in C*, the parallel extension to C, but 30 years later I rewrote it to run on CUDA based platforms so it runs very well on any Windows PC with a decent Nvidia GPU. Here you will find both a PDF version of the original thesis as well as the CUDA source code for the simulation.
 
 Link to github [repo](https://github.com/lekjart/ginzburg-landau/)
