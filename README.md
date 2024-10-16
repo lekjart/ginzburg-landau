@@ -40,6 +40,8 @@ Go to github and download the [CUDA samples](https://github.com/NVIDIA/cuda-samp
 
 You should then be able to open the `ThinkingMachine.sln` solution file and then go to `Project - Properties - VC++ Directories`. Edit the `Include Directories` and `Library Directories` to point to where you installed the samples. Do this for both `Release` and `Debug` configurations. You should then be able to rebuild the solution and launch the program.
 
+Note: the files `glew64.dll` and `freeglut.dll` are included in the repo, but they can actually be copied from the `cuda-samples` directory.
+
 # Program structure
 The program is really simple. It uses [Glut](https://freeglut.sourceforge.net/) to create a simple UI to dynamically change simulation parameters and a window to manage the display of a bitmap that is drawn into by the GPU and simulated by CUDA. All this interface code is in the `Master.cpp` file. All the CUDA specific code is in the `Solver.cu` and `Solver.h` files.
 
