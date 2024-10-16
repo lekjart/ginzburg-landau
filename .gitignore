@@ -1,2 +1,8 @@
 ThinkingMachine/.vs/
 .vs/
+*.exe
+*.pdb
+*.ipdb
+ThinkingMachine/ThinkingMachine/x64/
+ThinkingMachine/ThinkingMachine/Debug/
+ThinkingMachine/x64/Release/cudart*.dll
