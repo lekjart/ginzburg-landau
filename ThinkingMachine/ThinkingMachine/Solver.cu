@@ -63,6 +63,7 @@ void CreateZero(unsigned int x, unsigned int y)
 	u0 = 0.0f;
 	v0 = 1.0f;
 
+
 	for (int i = 0; i < FIELDSIZEY; i++) {
 		for (int j = 0; j < FIELDSIZEX; j++) {
 
@@ -88,6 +89,10 @@ void CreateZero(unsigned int x, unsigned int y)
 
 			d_oU[threadId] = d_nU[threadId];
 			d_oV[threadId] = d_nV[threadId];
+
+			if (i % 2 == 3) {
+				printf("%f %f\n", d_nU[threadId], d_nV[threadId]);
+			}
 		}
 	}
 
@@ -175,7 +180,10 @@ void InitSolver(int imageBuf,void **pixelBuffer)
 
 	UpdateCudaParas();
 
+	// put a little noise at the very beginning
+	h_Para[P_NOISE] = 0.1;
 	ResetField();
+	h_Para[P_NOISE] = 0.0;
 
 	isReady = true;
 }
@@ -319,7 +327,7 @@ void Advance(const float *d_ou, const float *d_ov, float *d_u, float *d_v)
 	ov[threadIdx.y][threadIdx.x] = d_ov[globalId];
 
 	// Wait for all threads to have fetched the data
-	__syncthreads();
+	//__syncthreads();
 
 	unsigned int i = threadIdx.y;
 	unsigned int j = threadIdx.x;
@@ -387,11 +395,17 @@ void Advance(const float *d_ou, const float *d_ov, float *d_u, float *d_v)
 	float rightU = getValueAt(d_ou, ii, rightId);
 	float rightV = getValueAt(d_ov, ii, rightId);
 
-	float gg2 =  (para[P_G2] * (ii) / (FIELDSIZEY - 1.0));;// sqrt(para[P_G0] * (jj) / (FIELDSIZEX - 1.0));
-	float gg1 =  (para[P_G1] * (ii) / (FIELDSIZEY - 1.0));
-	float gg0 =  (para[P_G0] * (ii) / (FIELDSIZEY - 1.0));
+	float gg2 = para[P_G2];
+	float gg1 = para[P_G1];
+	float gg0 = para[P_G0];
+	float nu = para[P_NU];
+
+	// Examples of ramp of parameters acrosss the field
+	//float gg2 =  (para[P_G2] * (ii) / (FIELDSIZEY - 1.0));;// sqrt(para[P_G0] * (jj) / (FIELDSIZEX - 1.0));
+	//float gg1 =  (para[P_G1] * (ii) / (FIELDSIZEY - 1.0));
+	//float gg0 =  (para[P_G0] * (ii) / (FIELDSIZEY - 1.0));
 	//float nu = (para[P_NU] * (jj) / (FIELDSIZEX - 1.0));
-	float nu =  para[P_NU] * 2.0f*(int(jj) - FIELDSIZEX / 2) / (FIELDSIZEX - 1.0) + .7*para[P_BETA];
+	//float nu =  para[P_NU] * 2.0f*(int(jj) - FIELDSIZEX / 2) / (FIELDSIZEX - 1.0) + .7*para[P_BETA];
 	float u = ou[i][j];
 	float v = ov[i][j];
 	float u2 = u*u;

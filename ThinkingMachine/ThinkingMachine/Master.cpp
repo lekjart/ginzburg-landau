@@ -46,12 +46,18 @@ void motion(int x, int y)
 
 void click(int button, int updown, int x, int y)
 {
+	printf("Button %d Being clicked %d: %d, %d\n", button, updown, x, y);
 	lastx = x;
 	lasty = y;
 	clicked = !clicked;
 
-	if (updown) {
-		//CreateZero(x , y);
+	if (button==0 && updown==1) {
+		// add zero the field where left mouse button is clicked
+		printf("creating zero\n");
+		CreateZero(x , y);
+	}
+	else if (button == 2 && updown == 1) {
+		// save next frame into file when right mouse button is clicked
 		saveFile = 1;
 	}
 }
@@ -163,6 +169,7 @@ INT_PTR CALLBACK MyDialogProc(
 	_In_ LPARAM lParam
 )
 {
+	printf("Code %d\n", uMsg);
 	switch (uMsg)
 	{
 	case WM_COMMAND:
