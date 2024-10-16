@@ -6,3 +6,4 @@ ThinkingMachine/.vs/
 ThinkingMachine/ThinkingMachine/x64/
 ThinkingMachine/ThinkingMachine/Debug/
 ThinkingMachine/x64/Release/cudart*.dll
+ThinkingMachine/x64/Debug/cudart*.dll
